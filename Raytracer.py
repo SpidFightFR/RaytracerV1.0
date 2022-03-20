@@ -9,7 +9,8 @@ from vector_class import Vector
 def SaveImage(image, width, height):
     imageName = input("Your image name:")
 
-    path = 'C:/Users/tnoye/Documents/Personnel/Programmation/Python/Raytracing/RaytracerFromScratch/Results/'
+    #path = 'C:/Users/tnoye/Documents/Personnel/Programmation/Python/Raytracing/RaytracerFromScratch/Results/'
+    path = './' #Uses your renderer folder as save folder
     fileName = path + imageName + '(%dX%d).png' % (width, height)
     plt.imsave(fileName, image)
     print("Your image was successfully saved! \nPath: " + path)
@@ -79,7 +80,7 @@ def reflectedRay(vector, axis):
 
 # Main Script=============================================================================================================================
 
-width, height = 300, 200
+width, height = 1280, 720
 maxDepth = 3
 
 ratio = float(width) / height
